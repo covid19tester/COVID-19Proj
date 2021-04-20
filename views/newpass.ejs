@@ -1,0 +1,40 @@
+<%- include('header'); %>
+<%- include('navbar'); %>
+
+<br>
+
+<div class="container">
+    <form action='/newpass/<%- userEmail %>' class="form" method="POST" id="newpassword">
+
+        <% if (error == true) { %>
+            <p class="errorMessage"> Passwords do not match</p>
+        <% } %>
+
+        <h1 class="formTitle">Reset Password</h1>
+          
+            <div class="formInput-group">
+            <input 
+                type="password" 
+                class="formInput" 
+                name="newPass" 
+                id="newPass"
+                required autofocus placeholder="New Password">
+            </div>
+
+            <div class="formInput-group">
+            <input 
+                type="password" 
+                class="formInput" 
+                name="password" 
+                id="password"
+                required autofocus placeholder="Confirm New Password">
+            </div>
+
+            <button class="formButton" 
+                    type="submit">
+                    Submit
+            </button>
+    </form>
+</div>
+
+<%- include('footer'); %>

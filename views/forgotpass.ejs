@@ -1,0 +1,45 @@
+<%- include('header'); %>
+<%- include('navbar'); %>
+<br>
+<div class="container">
+
+    <% if (typeof(locals.error)!= "undefined" && locals.error == 'EmailError') { %>
+        <p class="errorMessage"> No account exists with this email</p>
+    <% } %>
+    
+    <form action ="/forgotpass" class="form" method="POST" id="email">
+        <h1 class="formTitle">Email Verification</h1>
+            <div class="formInput-group">
+            <input 
+                type="email" 
+                class="formInput" 
+                name="verifyEmail" 
+                required autofocus placeholder="Insert Email">
+            </div>
+            
+            <button class="formButton" 
+                    type="submit">
+                    Continue
+            </button>
+
+            <p class="formText">
+                <a class="formLink" href="/login" id="linkLogin">
+                    <img src="img/cov.png" width=50 height= 50 style=vertical-align:middle alt="logo"> 
+                    Back to Login
+                </a>
+            </p> 
+
+            <p class="formText">
+                <a class="formLink" href="createacc" id="linkCreateAccount">
+                    <img src="img/cov2.png" width=50 height= 50 style=vertical-align:middle alt="logo"> 
+                    Create New Account
+                </a>
+            </p> 
+    </form>
+</div>
+
+<%- include('footer'); %>
+
+
+
+

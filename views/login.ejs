@@ -1,0 +1,75 @@
+<%- include('header'); %>
+<%- include('navbar'); %>
+
+<body> 
+    <h2><img src="img/cov.png" 
+             width=100 
+             height= 100 
+             style=vertical-align:middle 
+             alt="logo"> 
+             Covid-19 Updated Results!
+
+        <img src="img/cov2.png" 
+             width=100 
+             height= 100 
+             style=vertical-align:middle 
+             alt="logo">
+    </h2><br>
+</body>
+</html>
+
+<div class="container">
+    <div>
+        <% if (locals.error == true) { %>
+           <p class="errorMessage"> Username or password is incorrect</p>
+        <% } %>
+
+        <h1 class="formTitle">Login</h1>
+    </div>
+    <form action= "/login" 
+          method ="POST" 
+          class="form" 
+          id="login">
+
+        <div class="formInput-group">
+        <input 
+            type="email" 
+            class="formInput" 
+            name="username" 
+            id="email" 
+            required autofocus placeholder="Email">
+        </div>
+
+        <div class="formInput-group">
+        <input 
+            type="password" 
+            class="formInput" 
+            name="password" 
+            id="password" 
+            required autofocus placeholder="Password">
+        </div>
+
+        <button 
+            class="formButton" 
+            type="submit" 
+            >Login
+        </button>
+        
+        <p class="formText">
+            <a  class="formLink" href="forgotpass" id="password">
+                <img src="img/cov.png" width=50 height= 50 style=vertical-align:middle alt="logo"> 
+                Forgot Password
+            </a>
+        </p> 
+        
+        <p class="formText">
+            <a  class="formLink" href="createacc" id="linkCreateAccunt">
+                <img src="img/cov2.png" width=50 height= 50 style=vertical-align:middle alt="logo"> 
+                Create New Account
+            </a>
+        </p> 
+    </form>
+</div>
+      
+<%- include('footer'); %>
+  

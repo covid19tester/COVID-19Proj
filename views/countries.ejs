@@ -1,0 +1,37 @@
+<%- include('header'); %>
+<%- include('countriesnavbar'); %>
+
+<html id=#top></html>
+
+<div class="countryContainer">
+    <form action ="/countries" class="form" method="POST" id="email">
+        <h1 class="countriesHead">Countries</h1>
+    
+        <% if (countries.length > 0) { %>
+            <% countries.forEach(countries => { %>
+            <div class="flagContainer">
+                <img class ="flagImg" src= "<%= countries.image %>" style=vertical-align:middle alt="logo"> 
+                <input 
+                    class="<%= countries.class %>" 
+                    value="<%= countries.name %>"
+                    name="country"
+                    type="submit">
+                </input>
+            </div>
+            <% }) %>
+        <% } %>
+
+    </form>
+    
+    <div style="clear:both"><br>
+        <a href="#top" class="toTopButton"> 
+            Top of Page
+        </a>
+    </div>
+</div>
+        
+<br><br><br>
+
+<%- include('footer'); %>
+
+</html>

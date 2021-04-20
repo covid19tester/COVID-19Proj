@@ -1,0 +1,56 @@
+<%- include('header'); %>
+<%- include('navbar'); %>
+
+
+<div class="container"> 
+   
+    <% if (typeof(locals.error)!= "undefined" && locals.error == 'EmailError') { %>
+        <p class="errorMessage"> Account already exists with email</p>  
+    <% } else if (typeof(locals.error)!= "undefined" && (locals.error == 'PasswordError')) { %>  
+        <p class="errorMessage"> Passwords do not match</p>
+    <% } %>   
+        
+    <h1 class="formTitle">Create Account</h1>
+        <form action= "/createacc" class="form" method="POST" id="createAccount">
+            <div class="formInput-group">
+            <input 
+                type="email" 
+                class="formInput" 
+                name="username"
+                id="email" 
+                required autofocus placeholder="Email Address">
+            </div>
+
+            <div class="formInput-group">
+            <input 
+                type="password" 
+                class="formInput" 
+                id="softPassword"
+                name="softPassword" 
+                required autofocus placeholder="Password">
+            </div>
+        
+            <div class="formInput-group">
+            <input 
+                type="password" 
+                class="formInput" 
+                name="password"
+                id="password" 
+                required autofocus placeholder="Confirm Password">
+            </div>
+     
+            <button class="formButton" 
+                    type="submit">
+                    Submit
+            </button>
+
+            <p class="formText">
+                <a class="formLink" href="/login" id="linkLogin">
+                    <img src="img/cov.png" width=50 height= 50 style=vertical-align:middle alt="logo"> 
+                    Back to Login
+                </a>
+            </p> 
+        </form>
+</div>  
+
+<%- include('footer'); %>
