@@ -337,15 +337,7 @@ app.post('/countries', (req, res) => {
     });
     
     api.end(function (con) {
-        if (con.error) { 
-            try {
-                setTimeout(()=>{
-                    res.redirect('countries');
-                },5000);
-            } catch (e){
-                throw new Error(con.error);
-            }
-        }
+        if (con.error) throw new Error(con.error);
     
         const stats= {
             country: con.body[0].country,
