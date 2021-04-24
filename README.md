@@ -2,6 +2,6 @@
 ### COVID-19 Tester 
 ### Aaron Cortez
 ### My Senior Project
-COVID-19 website using COVID-19 data API
-Node.js application with express, mongodb, D3.JS, passport.js
+COVID-19 website using the COVID-19 data API
+as well as Node.js application with express, mongodb, and D3.js
 ### Deployed using Heroku
