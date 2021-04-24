@@ -1,5 +1,5 @@
 # COVID-19 Project
-### COVID-19 Tester
+### COVID-19 Tester account
 ### Aaron Cortez
 ### My Senior Project
 COVID-19 website using the COVID-19 data API
